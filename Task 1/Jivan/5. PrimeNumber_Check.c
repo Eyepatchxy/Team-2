@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int num, i, isPrime = 1; 
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num <= 1) {
+        isPrime = 0; 
+    } else {
+        
+        for (i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {                                                                        //Good Logic Building
+                isPrime = 0; 
+                break;
+            }
+        }
+    }
+    if (isPrime)
+        printf("%d is a Prime Number.\n", num);
+    else
+        printf("%d is NOT a Prime Number.\n", num);
+
+    return 0;
+}
+
+Output
+enter a number: 7 
+7 is a prime number 
+
+enter a number: 4
+
+4 is not a prime number
